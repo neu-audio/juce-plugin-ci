@@ -11,37 +11,8 @@ on:
         type: string
         default: ''
         description: 'Extra CMake flags for this specific plugin'
-    secrets:
-      DEV_ID_APP_CERT:
-        required: false
-      DEV_ID_APP_PASSWORD:
-        required: false
-      DEV_ID_INSTALLER_CERT:
-        required: false
-      DEV_ID_INSTALLER_PASSWORD:
-        required: false
-      DEVELOPER_ID_APPLICATION:
-        required: false
-      DEVELOPER_ID_INSTALLER:
-        required: false
-      NOTARIZATION_USERNAME:
-        required: false
-      NOTARIZATION_PASSWORD:
-        required: false
-      TEAM_ID:
-        required: false
-      AZURE_TENANT_ID:
-        required: false
-      AZURE_CLIENT_ID:
-        required: false
-      AZURE_CLIENT_SECRET:
-        required: false
-      AZURE_ENDPOINT:
-        required: false
-      AZURE_CODE_SIGNING_NAME:
-        required: false
-      AZURE_CERT_PROFILE_NAME:
-        required: false
+# Secrets are passed via `secrets: inherit` from the caller workflow.
+# No explicit secret declarations needed — all org/repo secrets are available.
 
 # When pushing new commits, cancel any running builds on that branch
 concurrency:
